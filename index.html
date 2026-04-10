@@ -96,181 +96,254 @@ nav span:hover {
 </nav>
 
 <!-- Slide 1 -->
+<!-- Slide 1 -->
 <div class="slide active">
   <h1>E-Commerce Website with AI-Powered Damage Detection</h1>
   <p>
-    A web-based system utilizing CNN and YOLOv8 for automated product listing
-    with object classification and condition assessment.
+    This project presents a web-based intelligent system designed to automate the product listing process 
+    using deep learning techniques. The system leverages Convolutional Neural Networks (CNN) for object 
+    classification and YOLOv8 for real-time damage detection.
+  </p>
+  <p>
+    By analyzing uploaded product images, the system identifies the product category and evaluates its condition, 
+    enabling users to generate accurate and reliable listings with minimal manual effort. This improves efficiency 
+    and enhances trust in e-commerce platforms.
   </p>
 </div>
 
 <!-- Slide 2 -->
 <div class="slide">
   <h1>Overview</h1>
-  <div class="row">
-    <div class="card">Introduction</div>
-    <div class="card">Literature Review</div>
-    <div class="card">Problem Statement</div>
-    <div class="card">Proposed Solution</div>
-    <div class="card">Objectives</div>
-  </div>
+  <p>
+    This presentation outlines the development of an AI-powered e-commerce system, covering key aspects such as 
+    problem identification, literature review, system design, methodology, and performance evaluation.
+  </p>
+  <p>
+    The primary goal is to demonstrate how integrating computer vision techniques into web applications can 
+    significantly improve the efficiency and accuracy of product listing systems.
+  </p>
 </div>
 
 <!-- Slide 3 -->
 <div class="slide">
   <h1>Introduction</h1>
   <p>
-    Web application featuring object identification, condition assessment, and automated product listing.
-    Reduces human effort by providing end-to-end usable products.
+    Traditional e-commerce platforms rely heavily on manual input for product listings, requiring users to 
+    provide details such as category, description, and condition. This process is time-consuming and prone 
+    to human errors, leading to inconsistencies in listings.
   </p>
   <p>
-    Uses CNN-based classification and damage detection to streamline workflows
-    and enhance productivity.
+    Our system introduces an AI-driven approach where users simply upload an image, and the system automatically 
+    identifies the product and evaluates its condition, thereby reducing manual effort and improving accuracy.
   </p>
 </div>
 
 <!-- Slide 4 -->
 <div class="slide">
   <h1>Problem Statement</h1>
-  <div class="row">
-    <div class="card">
-      Manual product listing is time-consuming and inconsistent.
-    </div>
-    <div class="card">
-      Existing platforms lack automatic damage detection.
-    </div>
-    <div class="card">
-      No integration of classification + condition assessment.
-    </div>
-  </div>
+  <p>
+    Existing e-commerce platforms lack automation in product listing, resulting in inefficient workflows and 
+    inconsistent data quality. Users often misclassify products or provide incorrect condition details, which 
+    reduces trust in online marketplaces.
+  </p>
+  <p>
+    Additionally, most current systems do not integrate object classification and damage detection, creating a 
+    gap in automated product evaluation. This highlights the need for a unified AI-based solution.
+  </p>
 </div>
 
 <!-- Slide 5 -->
 <div class="slide">
   <h1>Literature Review</h1>
   <p>
-    CNN and YOLOv8 have significantly improved object detection and classification.
-    Platforms like OLX and eBay use tagging but rely heavily on manual input.
+    Advances in computer vision and deep learning have significantly improved image classification and object 
+    detection capabilities. Convolutional Neural Networks (CNNs) are widely used for feature extraction and 
+    classification tasks, while YOLOv8 provides high-speed and accurate real-time object detection.
   </p>
   <p>
-    Gap: Most systems focus on either classification OR damage detection, not both.
+    However, most existing research focuses on either classification or damage detection separately. There is 
+    limited work on integrated systems that combine both functionalities within a web-based application.
   </p>
 </div>
 
 <!-- Slide 6 -->
 <div class="slide">
   <h1>System Methodology</h1>
-  <div class="row">
-    <div class="card">Image Upload</div>
-    <div class="card">Preprocessing</div>
-    <div class="card">CNN Classification</div>
-    <div class="card">YOLO Damage Detection</div>
-    <div class="card">Listing Generation</div>
-  </div>
+  <p>
+    The system workflow begins with the user uploading a product image. The image is then preprocessed, including 
+    resizing and normalization, to prepare it for model input.
+  </p>
+  <p>
+    A CNN model classifies the product into categories such as car, phone, or watch. Following this, YOLOv8 is 
+    applied to detect any visible damage. The results are displayed to the user, and a complete product listing 
+    is generated automatically.
+  </p>
 </div>
 
 <!-- Slide 7 -->
 <div class="slide">
   <h1>Technologies Used</h1>
-  <div class="row">
-    <div class="card">YOLOv8 (Fast Detection)</div>
-    <div class="card">CNN (Classification)</div>
-    <div class="card">Flask / Django (Backend)</div>
-  </div>
+  <p>
+    The system utilizes CNN models for accurate image classification due to their ability to capture spatial 
+    features effectively. YOLOv8 is used for damage detection because of its real-time performance and high 
+    detection accuracy.
+  </p>
+  <p>
+    For deployment, web frameworks such as Flask or Django are used to integrate the machine learning models 
+    into a user-friendly interface, making the system accessible and scalable.
+  </p>
 </div>
 
 <!-- Slide 8 -->
 <div class="slide">
   <h1>Proposed Solution</h1>
   <p>
-    Upload product image → classify product → detect damage → generate listing.
+    The proposed system provides a fully automated pipeline where users upload an image, and the system performs 
+    both classification and damage detection simultaneously. Based on the results, a complete product listing is 
+    generated, including category and condition.
   </p>
   <p>
-    Improves efficiency, reduces manual work, and enhances trust in e-commerce platforms.
+    This approach reduces manual effort, improves consistency, and enhances user experience, making it highly 
+    suitable for modern e-commerce platforms.
   </p>
 </div>
 
 <!-- Slide 9 -->
 <div class="slide">
   <h1>AI System</h1>
-  <div class="row">
-    <div class="card">Product Identification (Car, Phone, Watch)</div>
-    <div class="card">Damage Detection (Damaged / Undamaged)</div>
-    <div class="card">Trust Enhancement</div>
-  </div>
-</div>
+  <p>
+    The AI system integrates CNN and YOLOv8 models to deliver accurate and efficient performance. It can identify 
+    multiple product categories such as cars, watches, and phones, while also determining whether the product is 
+    damaged or undamaged.
+  </p>
+  <p>
+    This combination ensures reliable product classification and condition assessment, reducing human errors and 
+    improving trust in online marketplaces.
+  </p>
+</div>  
 <!-- Slide: Model Metrics -->
 <div class="slide">
   <h1>Model Performance & Evaluation</h1>
 
   <p>
-    The performance of the AI system was evaluated using standard object detection metrics 
-    including Precision, Recall, mAP@50, and mAP@50-95. These metrics provide a comprehensive 
-    understanding of the model’s accuracy, detection capability, and generalization.
+    The performance of our AI system was evaluated using standard object detection metrics such as 
+    Precision, Recall, mAP@50, and mAP@50-95. These metrics provide a comprehensive understanding 
+    of the model’s detection accuracy, reliability, and generalization capability.
+  </p>
+
+  <p>
+    Precision indicates how many detected objects were actually correct, while Recall measures how 
+    effectively the model identifies all relevant objects. The mAP@50 and mAP@50-95 metrics evaluate 
+    the model across different Intersection over Union (IoU) thresholds, ensuring robustness.
   </p>
 
   <div class="row">
     <div class="card">
-      <h3>Precision (P)</h3>
-      <p>0.8435</p>
-      <p>Indicates the proportion of correctly identified positive detections.</p>
+      <h3>Precision</h3>
+      <p><b>0.8435</b></p>
+      <p>High precision indicates fewer false positives.</p>
     </div>
 
     <div class="card">
-      <h3>Recall (R)</h3>
-      <p>0.9051</p>
-      <p>Measures how effectively the model detects all relevant objects.</p>
+      <h3>Recall</h3>
+      <p><b>0.9051</b></p>
+      <p>High recall ensures most objects are detected.</p>
     </div>
 
     <div class="card">
       <h3>mAP@50</h3>
-      <p>0.9275</p>
-      <p>Shows high detection accuracy at IoU threshold of 0.5.</p>
+      <p><b>0.9275</b></p>
+      <p>Strong performance at IoU threshold 0.5.</p>
     </div>
 
     <div class="card">
       <h3>mAP@50-95</h3>
-      <p>0.7400</p>
-      <p>Represents overall model performance across multiple IoU thresholds.</p>
+      <p><b>0.7400</b></p>
+      <p>Overall generalization across stricter thresholds.</p>
     </div>
   </div>
-<canvas id="chart" height="100"></canvas>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <div style="margin-top:30px;">
+    <canvas id="metricsChart"></canvas>
+  </div>
 
-<script>
-const ctx = document.getElementById('chart').getContext('2d');
-
-new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['Precision', 'Recall', 'mAP@50', 'mAP@50-95'],
-    datasets: [{
-      label: 'Model Performance',
-      data: [0.84352, 0.90516, 0.92751, 0.74009]
-    }]
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true,
-        max: 1
-      }
-    }
-  }
-});
-</script>
   <p style="margin-top:20px;">
-    These results demonstrate that the model achieves high accuracy and reliable detection performance, 
-    making it suitable for real-time e-commerce applications.
+    These results demonstrate that the model achieves high detection accuracy and reliability, 
+    making it suitable for real-time deployment in e-commerce platforms for automated product 
+    classification and condition assessment.
   </p>
 </div>
-<!-- Slide 10 -->
+  <!-- Slide: References -->
 <div class="slide">
-  <h1>References</h1>
-  <p>Roboflow, Kaggle datasets, YOLOv8 research papers, OpenAI tools.</p>
-</div>
+  <h1>References & Resources</h1>
 
+  <p>
+    The development of this project is supported by various research papers, datasets, and tools 
+    from the field of computer vision and deep learning. These resources played a crucial role in 
+    designing and implementing the AI-based product classification and damage detection system.
+  </p>
+
+  <div class="row">
+
+    <div class="card">
+      <h3>Roboflow</h3>
+      <p>
+        Used for dataset management, annotation, and preprocessing of images for training 
+        object detection models.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Kaggle</h3>
+      <p>
+        Provided publicly available datasets for training and evaluating classification 
+        and detection models for products like cars, phones, and watches.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Research Papers</h3>
+      <p>
+        Various academic papers on CNN and YOLOv8 were referred to understand model 
+        architecture, training techniques, and performance evaluation.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="card">
+      <h3>YOLOv8</h3>
+      <p>
+        Used for real-time object detection and damage identification due to its 
+        high speed and accuracy.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>CNN Models</h3>
+      <p>
+        Applied for feature extraction and classification of product categories 
+        such as cars, watches, and phones.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>OpenAI Tools</h3>
+      <p>
+        Assisted in documentation, structuring, and development guidance 
+        during the project lifecycle.
+      </p>
+    </div>
+
+  </div>
+
+  <p style="margin-top:20px;">
+    These resources collectively contributed to building a robust, scalable, and intelligent 
+    system for automated product listing in e-commerce platforms.
+  </p>
+</div>
 <div class="timer" id="timer">08:00</div>
 
 <script>
