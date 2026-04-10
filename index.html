@@ -1,194 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>PBL 2026 Presentation</title>
+<meta charset="UTF-8">
+<title>AI E-Commerce Presentation</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #020617;
-      color: white;
-      overflow: hidden;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #020617;
+  color: white;
+  overflow: hidden;
+}
 
-    .slide {
-      width: 100vw;
-      height: 100vh;
-      display: none;
-      padding: 60px;
-      box-sizing: border-box;
-    }
+.slide {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  padding: 60px;
+  box-sizing: border-box;
+}
 
-    .active {
-      display: block;
-    }
+.active {
+  display: block;
+}
 
-    h1 {
-      font-size: 60px;
-      background: linear-gradient(to right, #60a5fa, #a78bfa);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+h1 {
+  font-size: 50px;
+  background: linear-gradient(to right, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-    .card {
-      border: 1px solid rgba(255,255,255,0.1);
-      padding: 30px;
-      border-radius: 20px;
-      width: 30%;
-      background: rgba(255,255,255,0.03);
-      backdrop-filter: blur(10px);
-    }
+p {
+  opacity: 0.85;
+  line-height: 1.6;
+}
 
-    .row {
-      display: flex;
-      gap: 30px;
-      margin-top: 40px;
-    }
+.row {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
 
-    .timer {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: white;
-      color: black;
-      padding: 12px 20px;
-      border-radius: 20px;
-      font-weight: bold;
-      font-size: 20px;
-    }
+.card {
+  flex: 1;
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.03);
+}
 
-    nav {
-      position: fixed;
-      top: 20px;
-      right: 40px;
-    }
+.timer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  color: black;
+  padding: 10px 18px;
+  border-radius: 15px;
+  font-weight: bold;
+}
 
-    nav span {
-      margin-left: 20px;
-      cursor: pointer;
-      opacity: 0.7;
-    }
+nav {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+}
 
-    nav span:hover {
-      opacity: 1;
-    }
-  </style>
+nav span {
+  margin-left: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+nav span:hover {
+  opacity: 1;
+}
+</style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav>
-  <span onclick="goToSlide(0)">Problem</span>
-  <span onclick="goToSlide(1)">Methodology</span>
-  <span onclick="goToSlide(2)">Results</span>
-  <span onclick="goToSlide(3)">Team</span>
+  <span onclick="goToSlide(0)">Intro</span>
+  <span onclick="goToSlide(1)">Overview</span>
+  <span onclick="goToSlide(2)">Problem</span>
+  <span onclick="goToSlide(3)">Method</span>
+  <span onclick="goToSlide(4)">Tech</span>
+  <span onclick="goToSlide(5)">Solution</span>
+  <span onclick="goToSlide(6)">AI</span>
 </nav>
 
-<!-- SLIDE 1 -->
+<!-- Slide 1 -->
 <div class="slide active">
-  <h1>[PROJECT TITLE HERE]</h1>
-  <p>Define your core objective or hypothesis here.</p>
+  <h1>E-Commerce Website with AI-Powered Damage Detection</h1>
+  <p>
+    A web-based system utilizing CNN and YOLOv8 for automated product listing
+    with object classification and condition assessment.
+  </p>
+</div>
 
+<!-- Slide 2 -->
+<div class="slide">
+  <h1>Overview</h1>
+  <div class="row">
+    <div class="card">Introduction</div>
+    <div class="card">Literature Review</div>
+    <div class="card">Problem Statement</div>
+    <div class="card">Proposed Solution</div>
+    <div class="card">Objectives</div>
+  </div>
+</div>
+
+<!-- Slide 3 -->
+<div class="slide">
+  <h1>Introduction</h1>
+  <p>
+    Web application featuring object identification, condition assessment, and automated product listing.
+    Reduces human effort by providing end-to-end usable products.
+  </p>
+  <p>
+    Uses CNN-based classification and damage detection to streamline workflows
+    and enhance productivity.
+  </p>
+</div>
+
+<!-- Slide 4 -->
+<div class="slide">
+  <h1>Problem Statement</h1>
   <div class="row">
     <div class="card">
-      <h3>Problem Statement</h3>
-      <p>Explain the problem.</p>
+      Manual product listing is time-consuming and inconsistent.
     </div>
-
     <div class="card">
-      <h3>Literature Review</h3>
-      <p>Existing solutions.</p>
+      Existing platforms lack automatic damage detection.
     </div>
-
     <div class="card">
-      <h3>Innovation</h3>
-      <p>Your uniqueness.</p>
+      No integration of classification + condition assessment.
     </div>
   </div>
 </div>
 
-<!-- SLIDE 2 -->
+<!-- Slide 5 -->
+<div class="slide">
+  <h1>Literature Review</h1>
+  <p>
+    CNN and YOLOv8 have significantly improved object detection and classification.
+    Platforms like OLX and eBay use tagging but rely heavily on manual input.
+  </p>
+  <p>
+    Gap: Most systems focus on either classification OR damage detection, not both.
+  </p>
+</div>
+
+<!-- Slide 6 -->
 <div class="slide">
   <h1>System Methodology</h1>
-
   <div class="row">
-    <div class="card">
-      <h3>Dataset</h3>
-      <p>Details</p>
-    </div>
-
-    <div class="card">
-      <h3>Model</h3>
-      <p>Architecture</p>
-    </div>
-
-    <div class="card">
-      <h3>Execution</h3>
-      <p>Demo / Code</p>
-    </div>
+    <div class="card">Image Upload</div>
+    <div class="card">Preprocessing</div>
+    <div class="card">CNN Classification</div>
+    <div class="card">YOLO Damage Detection</div>
+    <div class="card">Listing Generation</div>
   </div>
 </div>
 
-<!-- SLIDE 3 -->
+<!-- Slide 7 -->
 <div class="slide">
-  <h1>Results & Analysis</h1>
-  <p>Show charts or outcomes here.</p>
+  <h1>Technologies Used</h1>
+  <div class="row">
+    <div class="card">YOLOv8 (Fast Detection)</div>
+    <div class="card">CNN (Classification)</div>
+    <div class="card">Flask / Django (Backend)</div>
+  </div>
 </div>
 
-<!-- SLIDE 4 -->
+<!-- Slide 8 -->
 <div class="slide">
-  <h1>Team</h1>
-  <p>Guide + Members</p>
+  <h1>Proposed Solution</h1>
+  <p>
+    Upload product image → classify product → detect damage → generate listing.
+  </p>
+  <p>
+    Improves efficiency, reduces manual work, and enhances trust in e-commerce platforms.
+  </p>
 </div>
 
-<!-- TIMER -->
+<!-- Slide 9 -->
+<div class="slide">
+  <h1>AI System</h1>
+  <div class="row">
+    <div class="card">Product Identification (Car, Phone, Watch)</div>
+    <div class="card">Damage Detection (Damaged / Undamaged)</div>
+    <div class="card">Trust Enhancement</div>
+  </div>
+</div>
+
+<!-- Slide 10 -->
+<div class="slide">
+  <h1>References</h1>
+  <p>Roboflow, Kaggle datasets, YOLOv8 research papers, OpenAI tools.</p>
+</div>
+
 <div class="timer" id="timer">08:00</div>
 
 <script>
-  let slides = document.querySelectorAll(".slide");
-  let current = 0;
+let slides = document.querySelectorAll(".slide");
+let current = 0;
 
-  function goToSlide(n) {
+function goToSlide(n) {
+  slides[current].classList.remove("active");
+  current = n;
+  slides[current].classList.add("active");
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowRight") {
     slides[current].classList.remove("active");
-    current = n;
+    current = (current + 1) % slides.length;
     slides[current].classList.add("active");
   }
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowRight") {
-      slides[current].classList.remove("active");
-      current = (current + 1) % slides.length;
-      slides[current].classList.add("active");
-    }
-    if (e.key === "ArrowLeft") {
-      slides[current].classList.remove("active");
-      current = (current - 1 + slides.length) % slides.length;
-      slides[current].classList.add("active");
-    }
-  });
-
-  // TIMER (8 minutes countdown)
-  let totalSeconds = 8 * 60;
-
-  function updateTimer() {
-    let minutes = Math.floor(totalSeconds / 60);
-    let seconds = totalSeconds % 60;
-
-    document.getElementById("timer").innerText =
-      `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-
-    if (totalSeconds > 0) {
-      totalSeconds--;
-    }
+  if (e.key === "ArrowLeft") {
+    slides[current].classList.remove("active");
+    current = (current - 1 + slides.length) % slides.length;
+    slides[current].classList.add("active");
   }
+});
 
-  setInterval(updateTimer, 1000);
+// TIMER
+let totalSeconds = 8 * 60;
+
+setInterval(() => {
+  let min = Math.floor(totalSeconds / 60);
+  let sec = totalSeconds % 60;
+
+  document.getElementById("timer").innerText =
+    `${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
+
+  if (totalSeconds > 0) totalSeconds--;
+}, 1000);
 </script>
 
 </body>
