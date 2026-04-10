@@ -103,6 +103,8 @@ nav span:hover {
     This project presents a web-based intelligent system designed to automate the product listing process 
     using deep learning techniques. The system leverages Convolutional Neural Networks (CNN) for object 
     classification and YOLOv8 for real-time damage detection.
+    The primary goal is to demonstrate how integrating computer vision techniques into web applications can 
+    significantly improve the efficiency and accuracy of product listing systems.
   </p>
   <p>
     By analyzing uploaded product images, the system identifies the product category and evaluates its condition, 
@@ -111,30 +113,36 @@ nav span:hover {
   </p>
 </div>
 
-<!-- Slide 2 -->
-<div class="slide">
-  <h1>Overview</h1>
-  <p>
-    This presentation outlines the development of an AI-powered e-commerce system, covering key aspects such as 
-    problem identification, literature review, system design, methodology, and performance evaluation.
-  </p>
-  <p>
-    The primary goal is to demonstrate how integrating computer vision techniques into web applications can 
-    significantly improve the efficiency and accuracy of product listing systems.
-  </p>
-</div>
-
+<!-- Slide 3 -->
 <!-- Slide 3 -->
 <div class="slide">
   <h1>Introduction</h1>
+
   <p>
-    Traditional e-commerce platforms rely heavily on manual input for product listings, requiring users to 
-    provide details such as category, description, and condition. This process is time-consuming and prone 
-    to human errors, leading to inconsistencies in listings.
+    The rapid growth of e-commerce platforms has increased the need for intelligent systems that can 
+    improve reliability, efficiency, and user trust. Traditional product listing methods rely heavily 
+    on manual input, which often leads to inconsistencies, incorrect product descriptions, and lack 
+    of transparency in online marketplaces.
   </p>
+
   <p>
-    Our system introduces an AI-driven approach where users simply upload an image, and the system automatically 
-    identifies the product and evaluates its condition, thereby reducing manual effort and improving accuracy.
+    According to research by Zhang et al., Artificial Intelligence plays a crucial role in transforming 
+    e-commerce systems by enabling automation, improving transparency, and detecting fraudulent activities. 
+    AI-driven solutions can analyze product data, user behavior, and images to enhance the overall 
+    marketplace experience.
+  </p>
+
+  <p>
+    In this context, AI can be effectively used to identify fraudulent sellers by analyzing inconsistencies 
+    in product listings, enhance transparency by providing accurate and automated product condition 
+    assessments, and reduce manual effort through intelligent automation of product classification 
+    and listing generation.
+  </p>
+
+  <p>
+    This project applies these concepts by integrating deep learning models to automatically classify 
+    products and detect their condition from images, thereby improving trust, reducing human error, 
+    and streamlining the e-commerce workflow.
   </p>
 </div>
 
@@ -159,10 +167,20 @@ nav span:hover {
     Advances in computer vision and deep learning have significantly improved image classification and object 
     detection capabilities. Convolutional Neural Networks (CNNs) are widely used for feature extraction and 
     classification tasks, while YOLOv8 provides high-speed and accurate real-time object detection.
+    Integrtion of machine learning models into web applictions using frameworks such as Flask, Django, and
+FastAPI has made AIbased services more accessible.
+Product listing pltforms like OLX nd eBay benefit from automted classifiction and tagging, which increases
+user convenience.
+However,these pltaforms still rely heavily on manul input, which creates inconsistency in product listings.
   </p>
   <p>
-    However, most existing research focuses on either classification or damage detection separately. There is 
-    limited work on integrated systems that combine both functionalities within a web-based application.
+     Gap in Literture
+Most existing work focuses on classifiction OR damge detection seprately, but very few integrte both.
+Current product listing websites rely provide automatic segregation of damaged and undamaged products
+before listing, which could improve trust and transparency.
+Limited research exists on lightweight, realtime web-based systems that classify object type watch, car,
+phone while simultaneously assessing damage condition.  
+    
   </p>
 </div>
 
@@ -175,23 +193,51 @@ nav span:hover {
   </p>
   <p>
     A CNN model classifies the product into categories such as car, phone, or watch. Following this, YOLOv8 is 
-    applied to detect any visible damage. The results are displayed to the user, and a complete product listing 
-    is generated automatically.
+    applied to detect any visible damage. The results are displayed to the buyers.Thereafter the buyers and sellers can indulge in a drop in chat option provided , where the interaction can act as a medium of transparency in case of dispute.
+    Also any buyer can directly access a whole page with all the products listed and filter through the products and search for products of their own choice filtering by price,category,damaged or undamaged condition.
+    
   </p>
 </div>
 
 <!-- Slide 7 -->
 <div class="slide">
   <h1>Technologies Used</h1>
+  <!-- Slide: Technologies Used -->
+<div class="slide">
+  <h1>Technologies Used</h1>
+
   <p>
-    The system utilizes CNN models for accurate image classification due to their ability to capture spatial 
-    features effectively. YOLOv8 is used for damage detection because of its real-time performance and high 
-    detection accuracy.
+    The system is built using a combination of deep learning models and web technologies to achieve 
+    accurate product classification and real-time damage detection. The primary technologies include 
+    Convolutional Neural Networks (CNN) for classification and YOLOv8 for object detection.
   </p>
+
   <p>
-    For deployment, web frameworks such as Flask or Django are used to integrate the machine learning models 
-    into a user-friendly interface, making the system accessible and scalable.
+    CNN models are specifically used for image classification because of their ability to extract 
+    spatial features such as edges, textures, and shapes from images. This makes them highly effective 
+    for identifying product categories like cars, watches, and phones. However, CNNs are limited to 
+    classification tasks and do not provide localization of objects within an image.
   </p>
+
+  <p>
+    To overcome this limitation, YOLOv8 (You Only Look Once, Version 8) is used for damage detection. 
+    Unlike traditional CNN models, YOLOv8 performs both object detection and localization in a single 
+    forward pass, making it significantly faster and suitable for real-time applications.
+  </p>
+
+  <p>
+    Compared to earlier YOLO versions such as YOLOv3 and YOLOv5, YOLOv8 provides improved accuracy, 
+    faster inference speed, and better generalization due to its optimized architecture and training 
+    techniques. It also supports advanced features like improved bounding box prediction and 
+    better handling of small objects, which is crucial for detecting minor damages.
+  </p>
+
+  <p>
+    For system integration, web frameworks such as Flask or Django are used to connect the trained 
+    models with a user interface. This enables users to upload images and receive instant predictions, 
+    making the system scalable and practical for real-world e-commerce applications.
+  </p>
+</div>
 </div>
 
 <!-- Slide 8 -->
@@ -204,23 +250,13 @@ nav span:hover {
   </p>
   <p>
     This approach reduces manual effort, improves consistency, and enhances user experience, making it highly 
-    suitable for modern e-commerce platforms.
+    suitable for modern e-commerce platforms. 
+  </p>
+  <p>
+    Not only does this project reduce human effort but also increase transparency and trust by including a chat functionality in the workflow. 
   </p>
 </div>
-
-<!-- Slide 9 -->
-<div class="slide">
-  <h1>AI System</h1>
-  <p>
-    The AI system integrates CNN and YOLOv8 models to deliver accurate and efficient performance. It can identify 
-    multiple product categories such as cars, watches, and phones, while also determining whether the product is 
-    damaged or undamaged.
-  </p>
-  <p>
-    This combination ensures reliable product classification and condition assessment, reducing human errors and 
-    improving trust in online marketplaces.
-  </p>
-</div>  
+  
 <!-- Slide: Model Metrics -->
 <div class="slide">
   <h1>Model Performance & Evaluation</h1>
