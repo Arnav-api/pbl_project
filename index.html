@@ -199,7 +199,72 @@ nav span:hover {
     <div class="card">Trust Enhancement</div>
   </div>
 </div>
+<!-- Slide: Model Metrics -->
+<div class="slide">
+  <h1>Model Performance & Evaluation</h1>
 
+  <p>
+    The performance of the AI system was evaluated using standard object detection metrics 
+    including Precision, Recall, mAP@50, and mAP@50-95. These metrics provide a comprehensive 
+    understanding of the model’s accuracy, detection capability, and generalization.
+  </p>
+
+  <div class="row">
+    <div class="card">
+      <h3>Precision (P)</h3>
+      <p>0.8435</p>
+      <p>Indicates the proportion of correctly identified positive detections.</p>
+    </div>
+
+    <div class="card">
+      <h3>Recall (R)</h3>
+      <p>0.9051</p>
+      <p>Measures how effectively the model detects all relevant objects.</p>
+    </div>
+
+    <div class="card">
+      <h3>mAP@50</h3>
+      <p>0.9275</p>
+      <p>Shows high detection accuracy at IoU threshold of 0.5.</p>
+    </div>
+
+    <div class="card">
+      <h3>mAP@50-95</h3>
+      <p>0.7400</p>
+      <p>Represents overall model performance across multiple IoU thresholds.</p>
+    </div>
+  </div>
+<canvas id="chart" height="100"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+const ctx = document.getElementById('chart').getContext('2d');
+
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Precision', 'Recall', 'mAP@50', 'mAP@50-95'],
+    datasets: [{
+      label: 'Model Performance',
+      data: [0.84352, 0.90516, 0.92751, 0.74009]
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true,
+        max: 1
+      }
+    }
+  }
+});
+</script>
+  <p style="margin-top:20px;">
+    These results demonstrate that the model achieves high accuracy and reliable detection performance, 
+    making it suitable for real-time e-commerce applications.
+  </p>
+</div>
 <!-- Slide 10 -->
 <div class="slide">
   <h1>References</h1>
